@@ -96,7 +96,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Select Workout" id="R01-rj-syc"/>
                     <connections>
-                        <segue destination="V6w-yc-5vQ" kind="push" identifier="weightSelection" id="nmz-wN-ngp"/>
+                        <segue destination="VHX-Ap-VnS" kind="modal" identifier="weightSelection" id="nmz-wN-ngp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70R-EQ-Hqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -142,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kpT-Hr-Gbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1564" y="1123"/>
+            <point key="canvasLocation" x="1974" y="1123"/>
         </scene>
         <!--Workout-->
         <scene sceneID="lrZ-0Y-bJ3">
@@ -155,6 +155,20 @@
                     <view key="view" contentMode="scaleToFill" id="CYA-4H-pvs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Power" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nac-Xz-NA2">
+                                <rect key="frame" x="20" y="72" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4d-5u-uh9">
+                                <rect key="frame" x="20" y="101" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Workout" id="UtS-QZ-vWI"/>
@@ -164,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEi-yM-2AM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957" y="1123"/>
+            <point key="canvasLocation" x="2367" y="1123"/>
         </scene>
         <!--Summary-->
         <scene sceneID="g2q-en-3rN">
@@ -183,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAJ-bH-5qs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2347" y="1123"/>
+            <point key="canvasLocation" x="2757" y="1123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="g7T-Ip-DBX">
@@ -220,6 +234,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jF2-Mc-yPC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="772" y="1123"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AIT-I3-Y76">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VHX-Ap-VnS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6DW-Oe-JAg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="V6w-yc-5vQ" kind="relationship" relationship="rootViewController" id="Wlr-Z9-LL9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="89w-Mx-ulq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1564" y="1123"/>
         </scene>
     </scenes>
 </document>
