@@ -22,6 +22,12 @@ float const pwrThresh = 1;
         self.powerPoints = [[NSMutableArray alloc] init];
         self.velocityPoints = [[NSMutableArray alloc] init];
         self.dataPoints = [[NSMutableArray alloc] init];
+        self.rmsVals = [[NSMutableArray alloc] init];
+        self.rmsFilteredVals = [[NSMutableArray alloc] init];
+        
+        self.lift = false;
+        self.reps = [NSNumber numberWithInteger:0];
+        self.rest = true;
     }
     
     return self;
