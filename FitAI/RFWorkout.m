@@ -12,7 +12,7 @@
 
 float const sampleRate = 100;
 float const deltaT = 1/sampleRate;
-float const pwrThresh = 1;
+float const pwrThresh = 0.2;
 
 -(id)init {
     self = [super init];
@@ -72,10 +72,10 @@ float const pwrThresh = 1;
         power += self.weight * rmsFilt * velocity;
     }
     
-    if(power > pwrThresh && !self.lift && self.rest) {
+    if(power < pwrThresh && !self.lift && self.rest) {
         NSLog(@"At rest");
     }
-    else if(power < pwrThresh && !self.lift && self.rest) {
+    else if(power > pwrThresh && !self.lift && self.rest) {
         NSLog(@"Midlift");
         self.lift = true;
         self.rest = false;
@@ -83,7 +83,7 @@ float const pwrThresh = 1;
     else if(power > pwrThresh && self.lift && !self.rest) {
         NSLog(@"Lift in progress");
     }
-    else if(power < pwrThresh && !self.lift && !self.rest) {
+    else if(power < pwrThresh && self.lift && !self.rest) {
         NSLog(@"End of lift: count as rep");
         self.lift = false;
         self.rest = true;
