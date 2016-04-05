@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MetaWear/MetaWear.h>
 
 #import "RFRepData.h"
 
@@ -15,6 +16,7 @@
 @property (strong, nonatomic) NSArray *availableIds;
 @property (strong, nonatomic) NSString *selectedId;
 @property (assign, nonatomic) NSInteger weight;
+@property (strong, nonatomic) MBLMetaWear *device;
 
 @property (strong, nonatomic) NSNumber *reps;
 @property (assign, nonatomic) BOOL lift;

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "RFWorkout.h"
+#import "RFWorkoutViewController.h"
 
 @interface RFUserDataViewController : UIViewController
 

@@ -28,8 +28,10 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    RFWorkoutViewController *dest = [segue destinationViewController];
+    
+    dest.workout = self.workout;
 }
-
 
 - (IBAction)submitData:(id)sender {
     NSInteger weight = [self.weightTextField.text integerValue];
