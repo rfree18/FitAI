@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <MetaWear/MetaWear.h>
 
-#import "RFRepData.h"
-
 @interface RFWorkout : NSObject
 
 @property (strong, nonatomic) NSArray *availableIds;

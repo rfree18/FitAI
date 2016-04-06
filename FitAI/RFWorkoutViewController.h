@@ -10,6 +10,7 @@
 #import <MetaWear/MetaWear.h>
 
 #import "RFWorkout.h"
+#import "RFSummaryViewController.h"
 
 @interface RFWorkoutViewController : UIViewController
 

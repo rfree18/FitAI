@@ -18,7 +18,7 @@
 		FA41A6501CAB1672000F9F76 /* RFUserDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA41A64F1CAB1672000F9F76 /* RFUserDataViewController.m */; };
 		FA51899F1CA86DFF0058AD5B /* RFWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = FA51899E1CA86DFF0058AD5B /* RFWorkout.m */; };
 		FA5189A21CA86F960058AD5B /* RFWorkoutSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5189A11CA86F960058AD5B /* RFWorkoutSelectionViewController.m */; };
-		FAD39C271CB2F179003A8325 /* RFRepData.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD39C261CB2F179003A8325 /* RFRepData.m */; };
+		FAFCEBBD1CB49098009E4FE6 /* RFSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFCEBBC1CB49098009E4FE6 /* RFSummaryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,8 +43,8 @@
 		FA51899E1CA86DFF0058AD5B /* RFWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFWorkout.m; sourceTree = "<group>"; };
 		FA5189A01CA86F960058AD5B /* RFWorkoutSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFWorkoutSelectionViewController.h; sourceTree = "<group>"; };
 		FA5189A11CA86F960058AD5B /* RFWorkoutSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFWorkoutSelectionViewController.m; sourceTree = "<group>"; };
-		FAD39C251CB2F179003A8325 /* RFRepData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFRepData.h; sourceTree = "<group>"; };
-		FAD39C261CB2F179003A8325 /* RFRepData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFRepData.m; sourceTree = "<group>"; };
+		FAFCEBBB1CB49098009E4FE6 /* RFSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSummaryViewController.h; sourceTree = "<group>"; };
+		FAFCEBBC1CB49098009E4FE6 /* RFSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSummaryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +103,12 @@
 				FA1DF08D1CA8360E009A30E8 /* RFDevicesViewController.m */,
 				FA5189A01CA86F960058AD5B /* RFWorkoutSelectionViewController.h */,
 				FA5189A11CA86F960058AD5B /* RFWorkoutSelectionViewController.m */,
+				FAFCEBBB1CB49098009E4FE6 /* RFSummaryViewController.h */,
+				FAFCEBBC1CB49098009E4FE6 /* RFSummaryViewController.m */,
 				FA51899D1CA86DFF0058AD5B /* RFWorkout.h */,
 				FA51899E1CA86DFF0058AD5B /* RFWorkout.m */,
 				FA28EABA1CB3534200B41E88 /* RFWorkoutViewController.h */,
 				FA28EABB1CB3534200B41E88 /* RFWorkoutViewController.m */,
-				FAD39C251CB2F179003A8325 /* RFRepData.h */,
-				FAD39C261CB2F179003A8325 /* RFRepData.m */,
 				FA41A64E1CAB1672000F9F76 /* RFUserDataViewController.h */,
 				FA41A64F1CAB1672000F9F76 /* RFUserDataViewController.m */,
 				FA1DF07E1CA8340D009A30E8 /* Main.storyboard */,
@@ -250,9 +250,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1DF07A1CA8340D009A30E8 /* AppDelegate.m in Sources */,
+				FAFCEBBD1CB49098009E4FE6 /* RFSummaryViewController.m in Sources */,
 				FA5189A21CA86F960058AD5B /* RFWorkoutSelectionViewController.m in Sources */,
 				FA1DF0771CA8340D009A30E8 /* main.m in Sources */,
-				FAD39C271CB2F179003A8325 /* RFRepData.m in Sources */,
 				FA1DF08E1CA8360E009A30E8 /* RFDevicesViewController.m in Sources */,
 				FA51899F1CA86DFF0058AD5B /* RFWorkout.m in Sources */,
 				FA28EABC1CB3534200B41E88 /* RFWorkoutViewController.m in Sources */,
