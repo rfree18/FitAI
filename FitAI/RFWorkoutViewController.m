@@ -17,6 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    NSInteger weight = self.workout.weight;
+    
+    self.workout = [[RFWorkout alloc] init];
+    self.workout.weight = weight;
     
     [self collectData];
 }
