@@ -265,6 +265,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cumulative Power:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SJ-Ga-Qrc">
+                                <rect key="frame" x="3" y="188" width="142" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -274,7 +280,9 @@
                             <constraint firstItem="oSt-ic-INg" firstAttribute="top" secondItem="t8z-be-0Ao" secondAttribute="bottom" constant="8" id="Qvp-6s-ZAe"/>
                             <constraint firstItem="n8o-n9-uaK" firstAttribute="leading" secondItem="w8j-Ga-dYX" secondAttribute="leadingMargin" constant="-9" id="SwA-0l-j37"/>
                             <constraint firstItem="oSt-ic-INg" firstAttribute="leading" secondItem="w8j-Ga-dYX" secondAttribute="leadingMargin" constant="-9" id="Xt9-dq-aBg"/>
+                            <constraint firstItem="0SJ-Ga-Qrc" firstAttribute="top" secondItem="rp6-OP-obF" secondAttribute="bottom" constant="8" id="jI0-jL-ep2"/>
                             <constraint firstItem="n8o-n9-uaK" firstAttribute="leading" secondItem="w8j-Ga-dYX" secondAttribute="leadingMargin" constant="-9" id="jMm-da-hb4"/>
+                            <constraint firstItem="0SJ-Ga-Qrc" firstAttribute="leading" secondItem="w8j-Ga-dYX" secondAttribute="leadingMargin" constant="-13" id="jqs-lg-SKq"/>
                             <constraint firstItem="rp6-OP-obF" firstAttribute="top" secondItem="n8o-n9-uaK" secondAttribute="bottom" constant="8" id="l7N-UH-yhO"/>
                             <constraint firstItem="Qpa-IK-gVJ" firstAttribute="leading" secondItem="w8j-Ga-dYX" secondAttribute="leadingMargin" constant="-9" id="znq-zi-t3a"/>
                         </constraints>
@@ -291,6 +299,7 @@
                         <outlet property="avgVelLabel" destination="Qpa-IK-gVJ" id="5uO-SY-G6Q"/>
                         <outlet property="peakPwrLabel" destination="n8o-n9-uaK" id="xsA-NT-WkD"/>
                         <outlet property="peakVelLabel" destination="rp6-OP-obF" id="IhV-MB-WYO"/>
+                        <outlet property="powerSumLabel" destination="0SJ-Ga-Qrc" id="2DH-YS-gnJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAJ-bH-5qs" userLabel="First Responder" sceneMemberID="firstResponder"/>

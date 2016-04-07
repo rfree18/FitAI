@@ -26,6 +26,7 @@
     self.avgVelLabel.text = [NSString stringWithFormat:@"%@ %.6f", self.avgVelLabel.text, [[self.workout.velocityPoints valueForKeyPath:@"@avg.self"] floatValue]];
     self.peakPwrLabel.text = [NSString stringWithFormat:@"%@ %.6f", self.peakPwrLabel.text, [[self.workout.powerPoints valueForKeyPath:@"@max.self"] floatValue]];
     self.peakVelLabel.text = [NSString stringWithFormat:@"%@ %.6f", self.peakVelLabel.text, [[self.workout.velocityPoints valueForKeyPath:@"@max.self"] floatValue]];
+    self.powerSumLabel.text = [NSString stringWithFormat:@"%@ %.6f", self.powerSumLabel.text, [[self.workout.powerPoints valueForKeyPath:@"@sum.self"] floatValue]];
 }
 
 - (void)didReceiveMemoryWarning {

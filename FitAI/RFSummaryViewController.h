@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *avgVelLabel;
 @property (weak, nonatomic) IBOutlet UILabel *peakPwrLabel;
 @property (weak, nonatomic) IBOutlet UILabel *peakVelLabel;
+@property (weak, nonatomic) IBOutlet UILabel *powerSumLabel;
 
 @property (strong, nonatomic) RFWorkout *workout;
 
