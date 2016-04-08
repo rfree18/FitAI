@@ -10,9 +10,8 @@
 
 @implementation RFWorkout
 
-float const sampleRate = 100;
+float const sampleRate = 10;
 float const deltaT = 1/sampleRate;
-float const pwrThresh = 0.2;
 
 -(id)init {
     self = [super init];
@@ -54,6 +53,8 @@ float const pwrThresh = 0.2;
 // Every millisecond
 -(void)findDataWithX:(NSNumber *)x y:(NSNumber *)y andZ:(NSNumber *)z {
     
+    float const pwrThresh = 0.20 * self.weight/45.0;  // Watts
+
     float velocity = 0;
     float power = 0;
     float rmsFilt = 0;
@@ -87,7 +88,7 @@ float const pwrThresh = 0.2;
         NSLog(@"End of lift: count as rep");
         self.lift = false;
         self.rest = true;
-        float repCounter = [self.reps floatValue] + 1;
+        float repCounter = [self.reps floatValue] + 0.5;
         self.reps = [NSNumber numberWithFloat:repCounter];
     }
     else if(power > pwrThresh && !self.lift && !self.rest) {

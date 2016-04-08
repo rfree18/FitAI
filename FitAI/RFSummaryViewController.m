@@ -17,8 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Make sure that resultsTable recognizes custom cell
-    [self.resultsTable registerNib:[UINib nibWithNibName:@"ResultsCell" bundle:nil] forCellReuseIdentifier:@"result"];
+//    float avgPwr = [[self.workout.powerPoints valueForKey:@"@avg.floatValue"] floatValue];
+//    float avgVel = [[self.workout.velocityPoints valueForKey:@"@avg.floatValue"] floatValue];
+//    float peakPwr = [[self.workout.powerPoints valueForKey:@"@max.floatValue"] floatValue];
+//    float peakVel = [[self.workout.velocityPoints valueForKey:@"@max.floatValue"] floatValue];
+    
+    // self.setNum.text = [NSString, self.setNum.text, "Set 1"]
+    self.avgPwrLabel.text = [NSString stringWithFormat:@"%@ %4.2f W", self.avgPwrLabel.text, [[self.workout.powerPoints valueForKeyPath:@"@avg.self"] floatValue]];
+    self.avgVelLabel.text = [NSString stringWithFormat:@"%@ %4.4f mm/s", self.avgVelLabel.text, [[self.workout.velocityPoints valueForKeyPath:@"@avg.self"] floatValue] * 1000];
+    self.peakPwrLabel.text = [NSString stringWithFormat:@"%@ %4.2f W", self.peakPwrLabel.text, [[self.workout.powerPoints valueForKeyPath:@"@max.self"] floatValue]];
+    self.peakVelLabel.text = [NSString stringWithFormat:@"%@ %4.4f mm/s", self.peakVelLabel.text, [[self.workout.velocityPoints valueForKeyPath:@"@max.self"] floatValue] * 1000];
+    self.powerSumLabel.text = [NSString stringWithFormat:@"%@ %4.2f W", self.powerSumLabel.text, [[self.workout.powerPoints valueForKeyPath:@"@sum.self"] floatValue]];
 }
 
 - (void)didReceiveMemoryWarning {

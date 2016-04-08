@@ -170,7 +170,7 @@
 				TargetAttributes = {
 					FA1DF0711CA8340D009A30E8 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 247UT9T8WT;
+						DevelopmentTeam = B9XZY34S67;
 					};
 				};
 			};
@@ -383,8 +383,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FitAI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rossfreeman.FitAI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbrubaker.FitAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -398,8 +399,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FitAI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rossfreeman.FitAI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbrubaker.FitAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

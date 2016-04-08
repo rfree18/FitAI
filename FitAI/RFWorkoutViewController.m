@@ -46,14 +46,15 @@
         
         MBLAccelerometer *accelerometer = self.device.accelerometer;
         
-        accelerometer.sampleFrequency = 100;
+        accelerometer.sampleFrequency = 10;
         
         [accelerometer.dataReadyEvent startNotificationsWithHandlerAsync:^(MBLAccelerometerData * _Nullable obj, NSError * _Nullable error) {
             if (!error) {
                 [self.workout findDataWithX:[NSNumber numberWithDouble:obj.x] y:[NSNumber numberWithDouble:obj.y] andZ:[NSNumber numberWithDouble:obj.z]];
-                NSLog(@"%@", [NSNumber numberWithDouble:obj.y]);
-                self.powerLabel.text = [NSString stringWithFormat:@"%f", [[_workout.powerPoints lastObject] floatValue]];
-                self.velocityLabel.text = [NSString stringWithFormat:@"%f", [[_workout.velocityPoints lastObject] floatValue]];
+                // NSLog(@"%@", [NSNumber numberWithDouble:obj.y]);
+                NSLog([NSString stringWithFormat:@"%2.6f W", [[_workout.powerPoints lastObject]floatValue]]);
+                self.powerLabel.text = [NSString stringWithFormat:@"%4.2f mW", [[_workout.powerPoints lastObject]floatValue]*1000 ];
+                self.velocityLabel.text = [NSString stringWithFormat:@"%4.2f mm/s", [[_workout.velocityPoints lastObject] floatValue]*1000];
                 self.repsLabel.text = [NSString stringWithFormat:@"%ld", (long)[_workout.reps integerValue]];
             }
             
