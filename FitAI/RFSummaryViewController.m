@@ -22,11 +22,12 @@
 //    float peakPwr = [[self.workout.powerPoints valueForKey:@"@max.floatValue"] floatValue];
 //    float peakVel = [[self.workout.velocityPoints valueForKey:@"@max.floatValue"] floatValue];
     
-    self.avgPwrLabel.text = [NSString stringWithFormat:@"%@ %.6f", self.avgPwrLabel.text, [[self.workout.powerPoints valueForKeyPath:@"@avg.self"] floatValue]];
-    self.avgVelLabel.text = [NSString stringWithFormat:@"%@ %.6f", self.avgVelLabel.text, [[self.workout.velocityPoints valueForKeyPath:@"@avg.self"] floatValue]];
-    self.peakPwrLabel.text = [NSString stringWithFormat:@"%@ %.6f", self.peakPwrLabel.text, [[self.workout.powerPoints valueForKeyPath:@"@max.self"] floatValue]];
-    self.peakVelLabel.text = [NSString stringWithFormat:@"%@ %.6f", self.peakVelLabel.text, [[self.workout.velocityPoints valueForKeyPath:@"@max.self"] floatValue]];
-    self.powerSumLabel.text = [NSString stringWithFormat:@"%@ %.6f", self.powerSumLabel.text, [[self.workout.powerPoints valueForKeyPath:@"@sum.self"] floatValue]];
+    // self.setNum.text = [NSString, self.setNum.text, "Set 1"]
+    self.avgPwrLabel.text = [NSString stringWithFormat:@"%@ %4.2f W", self.avgPwrLabel.text, [[self.workout.powerPoints valueForKeyPath:@"@avg.self"] floatValue]];
+    self.avgVelLabel.text = [NSString stringWithFormat:@"%@ %4.4f mm/s", self.avgVelLabel.text, [[self.workout.velocityPoints valueForKeyPath:@"@avg.self"] floatValue] * 1000];
+    self.peakPwrLabel.text = [NSString stringWithFormat:@"%@ %4.2f W", self.peakPwrLabel.text, [[self.workout.powerPoints valueForKeyPath:@"@max.self"] floatValue]];
+    self.peakVelLabel.text = [NSString stringWithFormat:@"%@ %4.4f mm/s", self.peakVelLabel.text, [[self.workout.velocityPoints valueForKeyPath:@"@max.self"] floatValue] * 1000];
+    self.powerSumLabel.text = [NSString stringWithFormat:@"%@ %4.2f W", self.powerSumLabel.text, [[self.workout.powerPoints valueForKeyPath:@"@sum.self"] floatValue]];
 }
 
 - (void)didReceiveMemoryWarning {

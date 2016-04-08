@@ -12,6 +12,7 @@
 
 @interface RFSummaryViewController : UIViewController
 
+// @property (weak, nonatomic) IBOutlet UILabel *setNum;
 @property (weak, nonatomic) IBOutlet UILabel *avgPwrLabel;
 @property (weak, nonatomic) IBOutlet UILabel *avgVelLabel;
 @property (weak, nonatomic) IBOutlet UILabel *peakPwrLabel;
