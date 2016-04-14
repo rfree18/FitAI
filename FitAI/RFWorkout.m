@@ -42,7 +42,10 @@ float const deltaT = 1/sampleRate;
     return _availableIds;
 }
 
--(float)simpleHighpassWithCurrent:(NSNumber *)curr previous:(NSNumber *)previous andFiltered:(NSNumber *)prevFilt {
+-(float)simpleHighpassWithCurrent:(NSNumber *)curr previous:(NSNumber *)previous andFiltered:(NSNumber *)prevFilt sampleRate:(NSNumber *)sampleRate {
+    // Try this:
+    float const deltaT = 1/[sampleRate floatValue];
+    
     float rc = 1 / (2 * 3.14);
     float alpha = rc / (rc + deltaT);
     
@@ -50,8 +53,8 @@ float const deltaT = 1/sampleRate;
     return output;
 }
 
-// Every millisecond
--(void)findDataWithX:(NSNumber *)x y:(NSNumber *)y andZ:(NSNumber *)z {
+// Every millisecond - variable depending on input sampling rate
+-(void)findDataWithX:(NSNumber *)x y:(NSNumber *)y andZ:(NSNumber *)z sampleRate:(NSNumber *)sampleRate {
     
     float const pwrThresh = 0.20 * self.weight/45.0;  // Watts
 
@@ -67,7 +70,7 @@ float const deltaT = 1/sampleRate;
     float rms = sqrtf(average);
     
     if([self.velocityPoints count] > 0) {
-        float rmsFilt = [self simpleHighpassWithCurrent:[NSNumber numberWithFloat:rms] previous:[self.rmsVals lastObject] andFiltered:[self.rmsFilteredVals lastObject]];
+        float rmsFilt = [self simpleHighpassWithCurrent:[NSNumber numberWithFloat:rms] previous:[self.rmsVals lastObject] andFiltered:[self.rmsFilteredVals lastObject] sampleRate:[NSNumber sampleRate]];
         
         velocity += rmsFilt * deltaT;
         power += self.weight * rmsFilt * velocity;

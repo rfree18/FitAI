@@ -45,7 +45,7 @@
         
         [accelerometer.dataReadyEvent startNotificationsWithHandlerAsync:^(MBLAccelerometerData * _Nullable obj, NSError * _Nullable error) {
             if (!error) {
-                [self.workout findDataWithX:[NSNumber numberWithDouble:obj.x] y:[NSNumber numberWithDouble:obj.y] andZ:[NSNumber numberWithDouble:obj.z]];
+                [self.workout findDataWithX:[NSNumber numberWithDouble:obj.x] y:[NSNumber numberWithDouble:obj.y] andZ:[NSNumber numberWithDouble:obj.z] sampleRate:[NSNumber accelerometer.sampleFrequency]];
                 // NSLog(@"%@", [NSNumber numberWithDouble:obj.y]);
                 NSLog([NSString stringWithFormat:@"%2.6f W", [[_workout.powerPoints lastObject]floatValue]]);
                 self.powerLabel.text = [NSString stringWithFormat:@"%4.2f mW", [[_workout.powerPoints lastObject]floatValue]*1000 ];

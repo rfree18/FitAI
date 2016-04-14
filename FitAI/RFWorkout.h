@@ -25,8 +25,11 @@
 @property (strong, nonatomic) NSMutableArray *rmsVals;
 @property (strong, nonatomic) NSMutableArray *rmsFilteredVals;
 
+// added
+@property (strong, nonatomic) NSNumber *sampleRate;
+
 + (NSArray *)getAvailableIds;
--(float)simpleHighpassWithCurrent:(NSNumber *)curr previous:(NSNumber *)previous andFiltered:(NSNumber *)prevFilt;
--(void)findDataWithX:(NSNumber *)x y:(NSNumber*)y andZ:(NSNumber *)z;
+-(float)simpleHighpassWithCurrent:(NSNumber *)curr previous:(NSNumber *)previous andFiltered:(NSNumber *)prevFilt sampleRate:(NSNumber *)sampleRate;
+-(void)findDataWithX:(NSNumber *)x y:(NSNumber*)y andZ:(NSNumber *)z sampleRate:(NSNumber *)sampleRate;
 
 @end
