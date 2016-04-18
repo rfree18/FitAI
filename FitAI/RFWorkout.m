@@ -111,4 +111,19 @@ float const pwrThresh = 0.2;
     
 }
 
+#pragma mark - copy
+- (id)copyWithZone:(NSZone *)zone {
+    RFWorkout *copy = [[RFWorkout alloc] init];
+    
+    copy.weight = self.weight;
+    copy.reps = self.reps;
+    copy.powerPoints = self.powerPoints;
+    copy.velocityPoints = self.velocityPoints;
+    copy.dataPoints = self.dataPoints;
+    copy.rmsVals = self.rmsVals;
+    copy.rmsFilteredVals = self.rmsFilteredVals;
+    
+    return copy;
+}
+
 @end

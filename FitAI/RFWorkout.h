@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <MetaWear/MetaWear.h>
 
-@interface RFWorkout : NSObject
+@interface RFWorkout : NSObject <NSCopying>
 
 @property (strong, nonatomic) NSArray *availableIds;
 @property (strong, nonatomic) NSString *selectedId;
@@ -24,6 +24,8 @@
 @property (strong, nonatomic) NSMutableArray *dataPoints;
 @property (strong, nonatomic) NSMutableArray *rmsVals;
 @property (strong, nonatomic) NSMutableArray *rmsFilteredVals;
+
+@property (strong, nonnull) RFWorkout *previousWorkout;
 
 + (NSArray *)getAvailableIds;
 -(float)simpleHighpassWithCurrent:(NSNumber *)curr previous:(NSNumber *)previous andFiltered:(NSNumber *)prevFilt;

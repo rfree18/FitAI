@@ -9,16 +9,12 @@
 #import <UIKit/UIKit.h>
 
 #import "RFWorkout.h"
+#import "RFResultsTableViewCell.h"
 
-@interface RFSummaryViewController : UIViewController
-
-@property (weak, nonatomic) IBOutlet UILabel *avgPwrLabel;
-@property (weak, nonatomic) IBOutlet UILabel *avgVelLabel;
-@property (weak, nonatomic) IBOutlet UILabel *peakPwrLabel;
-@property (weak, nonatomic) IBOutlet UILabel *peakVelLabel;
-@property (weak, nonatomic) IBOutlet UILabel *powerSumLabel;
+@interface RFSummaryViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) RFWorkout *workout;
+@property (weak, nonatomic) IBOutlet UITableView *resultsTable;
 
 - (IBAction)restartWorkout:(id)sender;
 

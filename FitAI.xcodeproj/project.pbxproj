@@ -15,6 +15,8 @@
 		FA1DF0851CA8340D009A30E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1DF0831CA8340D009A30E8 /* LaunchScreen.storyboard */; };
 		FA1DF08E1CA8360E009A30E8 /* RFDevicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DF08D1CA8360E009A30E8 /* RFDevicesViewController.m */; };
 		FA28EABC1CB3534200B41E88 /* RFWorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28EABB1CB3534200B41E88 /* RFWorkoutViewController.m */; };
+		FA3551951CC5713A0000EFA9 /* ResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3551941CC5713A0000EFA9 /* ResultsCell.xib */; };
+		FA3551981CC5719C0000EFA9 /* RFResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3551971CC5719C0000EFA9 /* RFResultsTableViewCell.m */; };
 		FA41A6501CAB1672000F9F76 /* RFUserDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA41A64F1CAB1672000F9F76 /* RFUserDataViewController.m */; };
 		FA51899F1CA86DFF0058AD5B /* RFWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = FA51899E1CA86DFF0058AD5B /* RFWorkout.m */; };
 		FA5189A21CA86F960058AD5B /* RFWorkoutSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5189A11CA86F960058AD5B /* RFWorkoutSelectionViewController.m */; };
@@ -37,6 +39,9 @@
 		FA1DF08D1CA8360E009A30E8 /* RFDevicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFDevicesViewController.m; sourceTree = "<group>"; };
 		FA28EABA1CB3534200B41E88 /* RFWorkoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFWorkoutViewController.h; sourceTree = "<group>"; };
 		FA28EABB1CB3534200B41E88 /* RFWorkoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFWorkoutViewController.m; sourceTree = "<group>"; };
+		FA3551941CC5713A0000EFA9 /* ResultsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultsCell.xib; sourceTree = "<group>"; };
+		FA3551961CC5719C0000EFA9 /* RFResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFResultsTableViewCell.h; sourceTree = "<group>"; };
+		FA3551971CC5719C0000EFA9 /* RFResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFResultsTableViewCell.m; sourceTree = "<group>"; };
 		FA41A64E1CAB1672000F9F76 /* RFUserDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFUserDataViewController.h; sourceTree = "<group>"; };
 		FA41A64F1CAB1672000F9F76 /* RFUserDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFUserDataViewController.m; sourceTree = "<group>"; };
 		FA51899D1CA86DFF0058AD5B /* RFWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFWorkout.h; sourceTree = "<group>"; };
@@ -111,7 +116,10 @@
 				FA28EABB1CB3534200B41E88 /* RFWorkoutViewController.m */,
 				FA41A64E1CAB1672000F9F76 /* RFUserDataViewController.h */,
 				FA41A64F1CAB1672000F9F76 /* RFUserDataViewController.m */,
+				FA3551961CC5719C0000EFA9 /* RFResultsTableViewCell.h */,
+				FA3551971CC5719C0000EFA9 /* RFResultsTableViewCell.m */,
 				FA1DF07E1CA8340D009A30E8 /* Main.storyboard */,
+				FA3551941CC5713A0000EFA9 /* ResultsCell.xib */,
 				FA1DF0811CA8340D009A30E8 /* Assets.xcassets */,
 				FA1DF0831CA8340D009A30E8 /* LaunchScreen.storyboard */,
 				FA1DF0861CA8340D009A30E8 /* Info.plist */,
@@ -162,6 +170,7 @@
 				TargetAttributes = {
 					FA1DF0711CA8340D009A30E8 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 247UT9T8WT;
 					};
 				};
 			};
@@ -190,6 +199,7 @@
 			files = (
 				FA1DF0851CA8340D009A30E8 /* LaunchScreen.storyboard in Resources */,
 				FA1DF0821CA8340D009A30E8 /* Assets.xcassets in Resources */,
+				FA3551951CC5713A0000EFA9 /* ResultsCell.xib in Resources */,
 				FA1DF0801CA8340D009A30E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +263,7 @@
 				FAFCEBBD1CB49098009E4FE6 /* RFSummaryViewController.m in Sources */,
 				FA5189A21CA86F960058AD5B /* RFWorkoutSelectionViewController.m in Sources */,
 				FA1DF0771CA8340D009A30E8 /* main.m in Sources */,
+				FA3551981CC5719C0000EFA9 /* RFResultsTableViewCell.m in Sources */,
 				FA1DF08E1CA8360E009A30E8 /* RFDevicesViewController.m in Sources */,
 				FA51899F1CA86DFF0058AD5B /* RFWorkout.m in Sources */,
 				FA28EABC1CB3534200B41E88 /* RFWorkoutViewController.m in Sources */,
@@ -369,10 +380,13 @@
 			baseConfigurationReference = 4C5B1DF50863362B415F2E67 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FitAI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rossfreeman.FitAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -381,10 +395,13 @@
 			baseConfigurationReference = 874A132497BF44EBAD1F9C2D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FitAI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rossfreeman.FitAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
