@@ -94,8 +94,16 @@
                             <constraint firstItem="l0a-Ym-LyA" firstAttribute="top" secondItem="EZ7-6U-NP4" secondAttribute="bottom" id="oIQ-ur-GTf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Select Workout" id="R01-rj-syc"/>
+                    <navigationItem key="navigationItem" title="Select Workout" id="R01-rj-syc">
+                        <barButtonItem key="rightBarButtonItem" title="Preset" id="lDw-YI-VNA">
+                            <connections>
+                                <action selector="changeOptions:" destination="yQY-Pv-qtr" id="Xy2-5I-R6R"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="optionButton" destination="lDw-YI-VNA" id="Yjt-IS-vaA"/>
+                        <outlet property="optionsTable" destination="EZ7-6U-NP4" id="Ysg-Xe-grp"/>
                         <segue destination="V6w-yc-5vQ" kind="push" identifier="weightSelection" id="8Xf-Gf-d6e"/>
                         <segue destination="D12-YA-cdf" kind="push" identifier="choosePreset" id="nE7-xx-6rD"/>
                     </connections>

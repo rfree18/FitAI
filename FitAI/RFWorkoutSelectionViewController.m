@@ -22,6 +22,7 @@
     self.userWorkout.device = self.device;
     
     self.presetWorkouts = @[@"Workout 1", @"Workout 2"];
+    self.isPreset = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,33 +37,46 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return [RFWorkout getAvailableIds].count;
-    return self.presetWorkouts.count;
+    if(self.isPreset){
+        return self.presetWorkouts.count;
+    }
+    return [RFWorkout getAvailableIds].count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"workout"];
     
-//    cell.textLabel.text = [RFWorkout getAvailableIds][indexPath.row];
-    cell.textLabel.text = self.presetWorkouts[indexPath.row];
+    if(self.isPreset) {
+        cell.textLabel.text = self.presetWorkouts[indexPath.row];
+    }
+    else{
+        cell.textLabel.text = [RFWorkout getAvailableIds][indexPath.row];
+    }
+    
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    self.userWorkout.selectedId = [RFWorkout getAvailableIds][indexPath.row];
-    if(indexPath.row == 0) {
-        self.userWorkout.selectedId = [RFWorkout getAvailableIds][0];
-        self.userWorkout.weight = 45;
+    if(self.isPreset) {
+        
+        if(indexPath.row == 0) {
+            self.userWorkout.selectedId = [RFWorkout getAvailableIds][0];
+            self.userWorkout.weight = 45;
+        }
+        
+        else {
+            self.userWorkout.selectedId = [RFWorkout getAvailableIds][0];
+            self.userWorkout.weight = 65;
+        }
+        
+        [self performSegueWithIdentifier:@"choosePreset" sender:self];
     }
     
     else {
-        self.userWorkout.selectedId = [RFWorkout getAvailableIds][0];
-        self.userWorkout.weight = 65;
+        self.userWorkout.selectedId = [RFWorkout getAvailableIds][indexPath.row];
+        [self performSegueWithIdentifier:@"weightSelection" sender:self];
     }
-    
-//    [self performSegueWithIdentifier:@"weightSelection" sender:self];
-    [self performSegueWithIdentifier:@"choosePreset" sender:self];
 }
 
 
@@ -76,4 +90,17 @@
 }
 
 
+- (IBAction)changeOptions:(id)sender {
+    if(self.isPreset) {
+        self.optionButton.title = @"Manual";
+    }
+    
+    else {
+        self.optionButton.title = @"Preset";
+    }
+    
+    self.isPreset = !self.isPreset;
+    
+    [self.optionsTable reloadData];
+}
 @end

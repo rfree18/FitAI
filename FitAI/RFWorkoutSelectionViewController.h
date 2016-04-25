@@ -17,5 +17,11 @@
 @property (strong, nonatomic) RFWorkout *userWorkout;
 @property (strong, nonatomic) MBLMetaWear *device;
 @property (strong, nonatomic) NSArray *presetWorkouts;
+@property (weak, nonatomic) IBOutlet UITableView *optionsTable;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *optionButton;
+
+@property (assign, nonatomic) BOOL isPreset;
+
+- (IBAction)changeOptions:(id)sender;
 
 @end
