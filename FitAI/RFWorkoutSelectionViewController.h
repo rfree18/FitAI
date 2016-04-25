@@ -16,5 +16,6 @@
 
 @property (strong, nonatomic) RFWorkout *userWorkout;
 @property (strong, nonatomic) MBLMetaWear *device;
+@property (strong, nonatomic) NSArray *presetWorkouts;
 
 @end

@@ -97,11 +97,12 @@
                     <navigationItem key="navigationItem" title="Select Workout" id="R01-rj-syc"/>
                     <connections>
                         <segue destination="V6w-yc-5vQ" kind="push" identifier="weightSelection" id="8Xf-Gf-d6e"/>
+                        <segue destination="D12-YA-cdf" kind="push" identifier="choosePreset" id="nE7-xx-6rD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70R-EQ-Hqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1168" y="1123"/>
+            <point key="canvasLocation" x="1076" y="1895"/>
         </scene>
         <!--Enter Weight-->
         <scene sceneID="egb-wO-GwM">
@@ -142,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kpT-Hr-Gbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1580" y="1123"/>
+            <point key="canvasLocation" x="1542" y="1123"/>
         </scene>
         <!--Workout-->
         <scene sceneID="lrZ-0Y-bJ3">
@@ -320,4 +321,7 @@
             <point key="canvasLocation" x="772" y="1123"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="nE7-xx-6rD"/>
+    </inferredMetricsTieBreakers>
 </document>

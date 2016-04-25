@@ -20,6 +20,8 @@
     
     self.userWorkout = [[RFWorkout alloc] init];
     self.userWorkout.device = self.device;
+    
+    self.presetWorkouts = @[@"Workout 1", @"Workout 2"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,21 +36,33 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [RFWorkout getAvailableIds].count;
+//    return [RFWorkout getAvailableIds].count;
+    return self.presetWorkouts.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"workout"];
     
-    cell.textLabel.text = [RFWorkout getAvailableIds][indexPath.row];
+//    cell.textLabel.text = [RFWorkout getAvailableIds][indexPath.row];
+    cell.textLabel.text = self.presetWorkouts[indexPath.row];
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.userWorkout.selectedId = [RFWorkout getAvailableIds][indexPath.row];
+//    self.userWorkout.selectedId = [RFWorkout getAvailableIds][indexPath.row];
+    if(indexPath.row == 0) {
+        self.userWorkout.selectedId = [RFWorkout getAvailableIds][0];
+        self.userWorkout.weight = 45;
+    }
     
-    [self performSegueWithIdentifier:@"weightSelection" sender:self];
+    else {
+        self.userWorkout.selectedId = [RFWorkout getAvailableIds][0];
+        self.userWorkout.weight = 65;
+    }
+    
+//    [self performSegueWithIdentifier:@"weightSelection" sender:self];
+    [self performSegueWithIdentifier:@"choosePreset" sender:self];
 }
 
 
