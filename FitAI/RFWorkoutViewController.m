@@ -17,6 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // Reset labels to blank values
+    self.powerLabel.text = @"";
+    self.velocityLabel.text = @"";
+    self.repsLabel.text = @"";
 }
 
 -(void)viewDidAppear:(BOOL)animated {
