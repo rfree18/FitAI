@@ -13,13 +13,6 @@
 
 @interface RFSummaryViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-// @property (weak, nonatomic) IBOutlet UILabel *setNum;
-@property (weak, nonatomic) IBOutlet UILabel *avgPwrLabel;
-@property (weak, nonatomic) IBOutlet UILabel *avgVelLabel;
-@property (weak, nonatomic) IBOutlet UILabel *peakPwrLabel;
-@property (weak, nonatomic) IBOutlet UILabel *peakVelLabel;
-@property (weak, nonatomic) IBOutlet UILabel *powerSumLabel;
-
 @property (strong, nonatomic) RFWorkout *workout;
 @property (weak, nonatomic) IBOutlet UITableView *resultsTable;
 
