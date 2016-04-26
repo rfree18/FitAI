@@ -93,7 +93,7 @@ float const num_sec = 2.;
             //int exercise_iter = [self.velocityPoints count];
         }
     }
-    else {
+    else if (!self.exercise && ([self.velocityPoints count] < (num_sec * sampleRate)) ) {
         // display to user that the exercise has NOT started yet. Any incoming signal is stored,
         // but not considered for processing towards rep count
         // should probably restrict the summary numbers on the workout summary screen to exclude
