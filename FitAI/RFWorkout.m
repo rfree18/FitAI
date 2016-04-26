@@ -80,7 +80,7 @@ float const num_sec = 2.;
     if ( (!self.exercise) && ([self.velocityPoints count] > (num_sec * sampleRate)) ){
         //float noise_max = max(self.powerPoints);
         float noise_max = [[self.powerPoints valueForKeyPath:@"@max.self"] floatValue];
-        float noise_min = [[self.powerPoints valueForKeyPath:@"@min.self"] floatValue];  // may not be necessary
+        //float noise_min = [[self.powerPoints valueForKeyPath:@"@min.self"] floatValue];  // may not be necessary
         
         NSExpression *expression = [NSExpression expressionForFunction:@"stddev:" arguments:@[[NSExpression expressionForConstantValue:self.powerPoints]]];
         float noise_std = [[expression expressionValueWithObject:nil context:nil] floatValue];
@@ -90,7 +90,7 @@ float const num_sec = 2.;
             // Once this triggers, the signal will get passed through the rep counter
             self.exercise = true;
             // Track this for use on plot later (maybe?)
-            int exercise_iter = [self.velocityPoints count];
+            //int exercise_iter = [self.velocityPoints count];
         }
     }
     else {
