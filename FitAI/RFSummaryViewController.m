@@ -53,11 +53,11 @@
     // Set workout to display in proper cell
     RFWorkout *chosenWorkout = indexPath.row == 0 ? self.workout : self.workout.previousWorkout;
     
-    cell.avgPwrLabel.text = [NSString stringWithFormat:@"Average Power: %.6f", [[chosenWorkout.powerPoints valueForKeyPath:@"@avg.self"] floatValue]];
-    cell.avgVelLabel.text = [NSString stringWithFormat:@"Average Velocity: %.6f", [[chosenWorkout.velocityPoints valueForKeyPath:@"@avg.self"] floatValue]];
-    cell.peakPwrLabel.text = [NSString stringWithFormat:@"Peak Power: %.6f", [[chosenWorkout.powerPoints valueForKeyPath:@"@max.self"] floatValue]];
-    cell.peakVelLabel.text = [NSString stringWithFormat:@"Peak Velocity: %.6f", [[chosenWorkout.velocityPoints valueForKeyPath:@"@max.self"] floatValue]];
-    cell.pwrSumLabel.text = [NSString stringWithFormat:@"Total Power: %.6f", [[chosenWorkout.powerPoints valueForKeyPath:@"@sum.self"] floatValue]];
+    cell.avgPwrLabel.text = [NSString stringWithFormat:@"Average Power: %6.2f W", [[chosenWorkout.powerPoints valueForKeyPath:@"@avg.self"] floatValue]];
+    cell.avgVelLabel.text = [NSString stringWithFormat:@"Average Velocity: %4.4f mm/s", [[chosenWorkout.velocityPoints valueForKeyPath:@"@avg.self"] floatValue]*1000]; //measured in mm/s
+    cell.peakPwrLabel.text = [NSString stringWithFormat:@"Peak Power: %6.2f W", [[chosenWorkout.powerPoints valueForKeyPath:@"@max.self"] floatValue]];
+    cell.peakVelLabel.text = [NSString stringWithFormat:@"Peak Velocity: %4.4f mm/s", [[chosenWorkout.velocityPoints valueForKeyPath:@"@max.self"] floatValue]*1000]; // measured in mm/s
+    cell.pwrSumLabel.text = [NSString stringWithFormat:@"Total Power: %6.2f W", [[chosenWorkout.powerPoints valueForKeyPath:@"@sum.self"] floatValue]];
     
     return cell;
 }

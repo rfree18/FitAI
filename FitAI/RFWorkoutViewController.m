@@ -46,15 +46,26 @@
         
         MBLAccelerometer *accelerometer = self.device.accelerometer;
         
-        accelerometer.sampleFrequency = 100;
+        accelerometer.sampleFrequency = 10;
         
         [accelerometer.dataReadyEvent startNotificationsWithHandlerAsync:^(MBLAccelerometerData * _Nullable obj, NSError * _Nullable error) {
             if (!error) {
                 [self.workout findDataWithX:[NSNumber numberWithDouble:obj.x] y:[NSNumber numberWithDouble:obj.y] andZ:[NSNumber numberWithDouble:obj.z]];
-                NSLog(@"%@", [NSNumber numberWithDouble:obj.y]);
-                self.powerLabel.text = [NSString stringWithFormat:@"%f", [[_workout.powerPoints lastObject] floatValue]];
-                self.velocityLabel.text = [NSString stringWithFormat:@"%f", [[_workout.velocityPoints lastObject] floatValue]];
-                self.repsLabel.text = [NSString stringWithFormat:@"%ld", (long)[_workout.reps integerValue]];
+                // NSLog([NSString stringWithFormat:@"%2.6f W", [[_workout.powerPoints lastObject]floatValue]]);
+                
+                // These values should not update if the user is in the 'pre-lift' phase, meaning he has not started the workout yet.
+                // Want findDataWithX(), and the lift detection within that, to decide if/when these values should appear.
+                // The values will all be stored, for now, regardless of if they are printed.
+                if( _workout.exercise ) {
+                    self.powerLabel.text = [NSString stringWithFormat:@"%4.2f mW", [[_workout.powerPoints lastObject]floatValue]*1000 ];
+                    self.velocityLabel.text = [NSString stringWithFormat:@"%4.2f mm/s", [[_workout.velocityPoints lastObject] floatValue]*1000];
+                    self.repsLabel.text = [NSString stringWithFormat:@"%ld", (long)[_workout.reps integerValue]];
+                }
+                else{
+                    self.powerLabel.text = @"Pre Lift";
+                    self.velocityLabel.text = @" ";
+                    self.repsLabel.text = @" ";
+                }
             }
             
             else {

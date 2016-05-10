@@ -19,6 +19,7 @@
 @property (strong, nonatomic) NSNumber *reps;
 @property (assign, nonatomic) BOOL lift;
 @property (assign, nonatomic) BOOL rest;
+@property (assign, nonatomic) BOOL exercise; // used to track whether or not the user is starting his exercise (or if bar is at rest)
 @property (strong, nonatomic) NSMutableArray *powerPoints;
 @property (strong, nonatomic) NSMutableArray *velocityPoints;
 @property (strong, nonatomic) NSMutableArray *dataPoints;

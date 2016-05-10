@@ -21,7 +21,7 @@
     self.userWorkout = [[RFWorkout alloc] init];
     self.userWorkout.device = self.device;
     
-    self.presetWorkouts = @[@"Workout 1", @"Workout 2"];
+    self.presetWorkouts = @[@"Shoulder Press - 65lbs", @"Standing Row - 65lbs"];
     self.isPreset = NO;
 }
 
@@ -62,7 +62,7 @@
         
         if(indexPath.row == 0) {
             self.userWorkout.selectedId = [RFWorkout getAvailableIds][0];
-            self.userWorkout.weight = 45;
+            self.userWorkout.weight = 65;
         }
         
         else {
