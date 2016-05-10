@@ -39,7 +39,7 @@ float const num_sec = 2.;
     static NSArray *_availableIds;
     
     if(!_availableIds) {
-        _availableIds = [NSArray arrayWithObjects:@"Shoulder Press", @"Squat", @"Deadlift", nil];
+        _availableIds = [NSArray arrayWithObjects:@"Shoulder Press", @"Squat", @"Deadlift", @"Standing Row", nil];
     }
     
     return _availableIds;
