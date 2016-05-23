@@ -52,7 +52,7 @@
     // NOTE: Copied/edited from https://codereview.stackexchange.com/questions/66366/turning-json-objects-into-custom-nsobjects
 
     NSError *error;
-    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"/Users/kyle/Desktop/sample_workout_profile" ofType:@"json"];
+    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"sample_workout_profile" ofType:@"json"];
     NSData *jsonData = [NSData dataWithContentsOfFile:jsonPath];
     if (jsonData == nil) {
         NSLog(@"Error reading in/parsing JSON file");
@@ -69,7 +69,7 @@
     // Create custom objects from JSON array
     NSMutableArray *items = [[NSMutableArray alloc] init];
     for (NSDictionary *dict in jsonArray) {
-        workoutProfile *entry = [[workoutProfile alloc] initWithWorkout:dict];
+        workoutProfile *entry = [[workoutProfile alloc] initWithDict: dict];
         [items addObject: entry];
     }
     

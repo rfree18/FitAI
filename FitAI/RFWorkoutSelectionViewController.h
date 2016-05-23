@@ -39,6 +39,6 @@
 // Copied from same source as in load_workout.
 // Explicitly casts each line from the JSON file to a dict??
 // QUESTION: Where do I put this??
--(instancetype)initWithWorkout:(NSDictionary *)dict;
+-(instancetype)initWithDict:(NSDictionary *)dict;
 
 @end
