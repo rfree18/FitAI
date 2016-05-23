@@ -25,3 +25,20 @@
 - (IBAction)changeOptions:(id)sender;
 
 @end
+
+// set up object 'workout_profile' to contain the contents of the loaded JSON file.
+// fields are self-explanatory, and should be very easy to parse
+// QUESTION: Can't cast NSIntegers and NSStrings in same object??
+// will rely on casting the strings to ints if necessary
+@interface workoutProfile : NSObject
+@property(copy, nonatomic) NSString *athlete_id;
+@property(copy, nonatomic) NSString *workout_order;
+@property(copy, nonatomic) NSString *lift_name;
+@property(copy, nonatomic) NSString *lift_weight;
+@property(copy, nonatomic) NSString *lift_units;
+// Copied from same source as in load_workout.
+// Explicitly casts each line from the JSON file to a dict??
+// QUESTION: Where do I put this??
+-(instancetype)initWithWorkout:(NSDictionary *)dict;
+
+@end
